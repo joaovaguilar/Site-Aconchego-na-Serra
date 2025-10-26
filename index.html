@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <title>Aconchego na Serra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="img/Logoserra.png" alt="Aconchego da Serra">
+        </div>
+
+
+        <nav>
+            <ul>
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#chalets">Chalés</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#booking">Reservas</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Viva momentos únicos em meio a natureza</h1>
+            <p>Reserve seu chalé e sinta a paz das montanhas</p>
+        </div>
+    </section>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Relaxe nas Montanhas</h2>
+            <p>Experimente o conforto e a tranquilidade dos nossos chalés.</p>
+            <a href="#chalets" class="btn">Ver chalés</a>
+        </div>
+
+    </section>
+
+    <section id="chalets">
+        <h2 class="titulo-chales">Nossos Chalés ⛺</h2>
+        <div class="chalets-container">
+            <div class="chalets-card">
+                <img src="./img/bannerfloresta.png" alt="Aconchego na Serra">
+                <div class="columns-text">
+                    <h3>Aconchego da Serra</h3>
+                    <p>Perfeito para casais. Vista incrível da montanha.</p>
+                    <span>R$ 350 / noite</span>
+                    <a href="#booking" class="btn">Reservar</a>
+                </div>
+            </div>
+
+            <div class="chalets-card">
+                <img src="./img/cabanalago.jpg" alt="Aconchego no lago">
+                <div class="columns-text">
+                    <h3>Cabana do Lago</h3>
+                    <p>Relaxe à beira do lago com conforto e privacidade.</p>
+                    <span>R$ 450 / noite</span>
+                    <a href="#booking" class="btn">Reservar</a>
+                </div>
+            </div>
+
+            <div class="chalets-card">
+                <img src="./img/regugiocabana.jpg" alt="Refúfio da familia">
+                <div class="columns-text">
+                    <h3>Refúgio da Família</h3>
+                    <p>Ideal para famílias e grupos. Espaço e natureza.</p>
+                    <span>R$ 500 / noite</span>
+                    <a href="#booking" class="btn">Reservar</a>
+                </div>
+            </div>
+
+            <div class="chalets-card">
+                <img src="./img/chalelivre.jpg" alt="Chale da Montanha">
+                <div class="columns-text">
+                    <h3>Chalé da Montanha</h3>
+                    <p>Fuja da rotina no nosso charmoso chalé, aninhado no coração da montanha. Desfrute do calor da
+                        lareira, do silêncio da natureza.</p>
+                    <span>R$ 650 / noite</span>
+                    <a href="#booking" class="btn">Reservar</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-content">
+            <h2 class="titulo-sobre">Sobre Nós:</h2>
+            <p class="about-text">
+                Localizado no coração da Serra, nossos chalés oferecem um conforto e contato direto com a natureza.
+                Aqui, cada amanhecer é um convite para relaxar e se reconectar com o que importa.
+            </p>
+        </div>
+    </section>
+
+    <section id="booking">
+        <div class="booking-content">
+            <h2 class="titlle-booking">Faça Sua<br> Reserva!</h2>
+            <form class="table-form">
+                <label class="name-reserve">Nome Completo:</label>
+                <input type="text" placeholder="Seu Nome" required>
+
+                <label class="name-reserve">Email:</label>
+                <input type="email" placeholder="seu@email.com" required>
+
+                <label class="name-reserve">Data de entrada:</label>
+                <input type="date" required>
+
+                <label class="name-reserve">Data de Saída:</label>
+                <input type="date" required>
+
+                <label class="name-reserve">Selecione o Chalé:</label>
+                <select>
+                    <option>Chalé da Serra</option>
+                    <option>Chalé do Lago</option>
+                    <option>Chalé da Floresta</option>
+                    <option>Chalé da Montanha</option>
+                </select>
+
+                <button type="submit"> Enviar Reserva</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="contact-text">
+            <p>&copy; 2025 Aconchego na Serra - Todos os direitos reservados</p>
+            <p>📍 Serra das Águas - MG | 📧contato@aconchegonaserra.com </p>
+            <a href="https://github.com/joaovaguilar" target="_blank" class="butom">😁Me siga no GitHub!</a>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+    <script>
+        const cards = document.querySelectorAll('.card-chale');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        cards.forEach(card => observer.observe(card));
+    </script>
+
+    
+</body>
+
+</html>
